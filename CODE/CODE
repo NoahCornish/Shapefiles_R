@@ -1,0 +1,12 @@
+library(rgdal)
+library(ggplot2)
+library(sf)
+
+
+setwd("D:/LIO-2022-10-19")
+
+shp = readOGR(dsn = ".", layer = "ORWN_TRACK")
+shp_prov = readOGR(dsn = ".", layer = "Province")
+
+plot(shp_prov, col = "lightblue")
+plot(shp, col = "red")
